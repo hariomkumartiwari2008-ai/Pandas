@@ -1,0 +1,90 @@
+#pandas
+
+# data frame : the structure data
+#Create data frame
+
+import pandas as pd
+df = pd.DataFrame([1,2,3],columns=['column_name'])
+print(df)
+
+
+Answer:
+   column_name
+0            1
+1            2
+2            3
+
+
+abc = {
+    'name': ['hariom','sharan','rishit','himanshu','kishan'],
+    'age' : [18,20,20,17,10],
+    'marks':[97,92,91,93,90]
+}
+df = pd.DataFrame(abc)
+print(df)
+
+Answer:
+   name  age  marks
+0    hariom   18     97
+1    sharan   20     92
+2    rishit   20     91
+3  himanshu   17     93
+4    kishan   10     90
+
+
+import pandas as pd
+
+abc = {
+    'name': ['hariom','sharan','rishit','himanshu','kishan'],
+    'age' : [18,20,20,17,10],
+    'marks':[99,92,91,99,90]
+}
+df = pd.DataFrame(abc)
+print(df)
+
+df.rename(columns={'marks':'score'},inplace = True)
+print(df)
+
+Answer:
+       name  age  marks
+0    hariom   18     99
+1    sharan   20     92
+2    rishit   20     91
+3  himanshu   17     99
+4    kishan   10     90
+       name  age  score
+0    hariom   18     99
+1    sharan   20     92
+2    rishit   20     91
+3  himanshu   17     99
+4    kishan   10     90
+
+#Q1) creaye a code where u have name, employee id, age, salary, doj,min =15 rows
+
+import pandas as pd
+company = {'name':['hariom','himanshu','anshu','rishit','sharan','kishan','nitesh','prashant','ankit','subhay','prince','priyanshu','shubham','suraj','raj'],
+           'employee id' : [20,30,40,50,60,70,80,90,10,12,1,13,14,16,17],
+           'age': [18,17,15,20,20,18,19,19,20,23,18,16,19,20,24],
+           'salary': [200000,100000,10000,20000,30000,40000,50000,60000,10000,20000,34000,19000,35000,50200,100000],
+           'dOJ': [2009,2010,2024,2012,2014,2016,2017,2010,2013,2017,2020,2018,2019,2010,2009]
+}
+df=pd.DataFrame(company)
+print(df)
+
+Answer:
+         name  employee id  age  salary   dOJ
+0      hariom           20   18  200000  2009
+1    himanshu           30   17  100000  2010
+2       anshu           40   15   10000  2024
+3      rishit           50   20   20000  2012
+4      sharan           60   20   30000  2014
+5      kishan           70   18   40000  2016
+6      nitesh           80   19   50000  2017
+7    prashant           90   19   60000  2010
+8       ankit           10   20   10000  2013
+9      subhay           12   23   20000  2017
+10     prince            1   18   34000  2020
+11  priyanshu           13   16   19000  2018
+12    shubham           14   19   35000  2019
+13      suraj           16   20   50200  2010
+14        raj           17   24  100000  2009
